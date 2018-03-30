@@ -1,0 +1,8 @@
+{
+    "require": {
+        "chelout/ozla-php-sdk": "dev-master"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.0"
+    }
+}
