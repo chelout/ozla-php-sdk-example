@@ -2,7 +2,7 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-$apiKey = 'sednpVgiqkq5shZGgpxKOxObeVI2kRdqw2lGOBg1tOYdso2N5qrkN9pRXGt5';
+$apiKey = 'aHIKA9wS24VxlCSVTaPTtH00Bh1QIXWH5oYGqOmNl9vnLGNoVY7iozGrHAEW';
 $domain = 'project1';
 $ozla = new Chelout\PhpSdk\Ozla($domain, $apiKey);
 
@@ -69,6 +69,27 @@ $ozla = new Chelout\PhpSdk\Ozla($domain, $apiKey);
 // $ozla->deleteContragent(1);
 
 /*
+ * Funnels
+ */
+// $funnels = $ozla->funnels();
+// dump($funnels);
+
+// $funnel = $ozla->createFunnel([
+//     'name' => 'Новая воронка',
+// ]);
+// dump($funnel);
+
+// $funnel = $ozla->funnel(1);
+// dump($funnel);
+
+// $funnel = $ozla->updateFunnel(1, [
+//     'name' => 'Обновленная воронка',
+// ]);
+// dump($funnel);
+
+// $ozla->deleteFunnel(42);
+
+/*
  * Deal status colors
  */
 // $statusColors = $ozla->statusColors();
@@ -89,29 +110,29 @@ $ozla = new Chelout\PhpSdk\Ozla($domain, $apiKey);
 /*
  * Deal statuses
  */
-// $statuses = $ozla->statuses();
+// $statuses = $ozla->statuses(1);
 // dump($statuses);
 
-// $status = $ozla->createStatus([
+// $status = $ozla->createStatus(1, [
 //     'name' => 'Новый статус',
 //     'color_id' => 1,
 // ]);
 // dump($status);
 
-// $status = $ozla->status(1);
+// $status = $ozla->status(1, 1);
 // dump($status);
 
-// $status = $ozla->updateStatus(1, [
+// $status = $ozla->updateStatus(1, 1, [
 //     'name' => 'Обновленный статус',
 // ]);
 // dump($status);
 
-// $status = $ozla->updateStatusPriority(1, [
-// 	'priority' => 3,
+// $status = $ozla->updateStatusPriority(1, 1, [
+//     'priority' => 3,
 // ]);
 // dump($status);
 
-// $ozla->deleteStatus(1);
+// $ozla->deleteStatus(1, 1);
 
 /*
  * Deals
